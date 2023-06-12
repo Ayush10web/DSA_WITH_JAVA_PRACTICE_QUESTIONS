@@ -1,0 +1,36 @@
+# THIS IS A FAMOUS QUESTION AND EVERYONE MIGHT HAVE CAME ACROSS THIS QUESTION SO MANY TIMES SO LETS LEARN HOW TO SOLVE THIS 
+# THE QUESTION TELLS US TO MOVE ALL N PLATES FROM ONE TOWER TO ANOTHER TOWER THERE CAN BE 3 NUMBER OF TOWERS OR MORE AND THE RULES ARE AS FOLLOW :
+# 1.ONLY ONE DISK CAN MOVE AT A TIME 
+# 2.A DISK CAN ONLY BE MOVED IF IT IS THE UPPER MOST DISK IN THE STACK
+# 3.NO DISK CAN BE PLACED ON TOP OF THE SMALLER DISK
+
+# ALGORITHM USING RECURSION 
+
+  toh(n-1 , t1 , t2 , t3);
+  System.out.println(n + " [ " + t1 + " -> " + t2 + " ] ");
+  toh(n-1 , t3 ,t2 , t1);
+
+# JAVA IMPLEMENTATION 
+
+import java.util.*;
+
+public class Main
+{
+  public static void toh(int n, int t1, int t2, int t3)
+  {
+    if (n == 0)
+      return;
+    toh(n - 1, t1, t3, t2);
+    System.out.println(n + "[" + t1 + " -> " + t2 + "]");
+    toh(n - 1, t3, t2, t1);
+  }
+  public static void main(String[] args) throws Exception
+  {
+    Scanner scn = new Scanner(System.in);
+    int n = scn.nextInt();
+    int t1 = scn.nextInt();
+    int t2 = scn.nextInt();
+    int t3 = scn.nextInt();
+    toh(n, t1, t2, t3);
+  }
+}
