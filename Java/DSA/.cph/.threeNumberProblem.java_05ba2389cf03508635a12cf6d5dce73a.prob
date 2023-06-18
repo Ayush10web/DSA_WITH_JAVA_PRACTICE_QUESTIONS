@@ -1,1 +1,0 @@
-{"name":"Local: threeNumberProblem","url":"e:\\Java\\DSA\\threeNumberProblem.java","tests":[{"id":1687000456060,"input":"5\n4\n1\n12\n2046\n194723326\n","output":"2 2 0\n-1\n6 6 0\n1023 1023 0\n97361663 97361663 0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Java\\DSA\\threeNumberProblem.java","group":"local","local":true}
